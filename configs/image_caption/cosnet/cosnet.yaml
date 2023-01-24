@@ -11,8 +11,8 @@ DATALOADER:
   TRAIN_BATCH_SIZE: 8
   TEST_BATCH_SIZE: 32
   NUM_WORKERS: 6
-  FEATS_FOLDER: '../open_source_dataset/mscoco_dataset/features/CLIP_RN101_49'
-  ANNO_FOLDER:  '../open_source_dataset/mscoco_dataset'
+  FEATS_FOLDER: './configs/image_caption/cosnet/open_source_dataset/mscoco_dataset/features/CLIP_RN101_49'
+  ANNO_FOLDER:  './configs/image_caption/cosnet/open_source_dataset/mscoco_dataset'
   SEQ_PER_SAMPLE:  5
   MAX_FEAT_NUM: 50
   SAMPLE_PROB: 0.2
@@ -132,9 +132,9 @@ DECODE_STRATEGY:
 ####################################### evaluation ####################################### 
 INFERENCE:
   NAME: 'COCOEvaler'
-  VOCAB: '../open_source_dataset/mscoco_dataset/vocabulary.txt'
+  VOCAB: './configs/image_caption/cosnet/open_source_dataset/mscoco_dataset/vocabulary.txt'
   ID_KEY: 'image_id'
   VALUE: 'caption'
-  VAL_ANNFILE: '../open_source_dataset/mscoco_dataset/captions_val5k.json'
-  TEST_ANNFILE: '../open_source_dataset/mscoco_dataset/captions_test5k.json'
+  VAL_ANNFILE: './configs/image_caption/cosnet/open_source_dataset/mscoco_dataset/captions_val5k.json'
+  TEST_ANNFILE: './configs/image_caption/cosnet/open_source_dataset/mscoco_dataset/captions_test5k.json'
   GENERATION_MODE: True

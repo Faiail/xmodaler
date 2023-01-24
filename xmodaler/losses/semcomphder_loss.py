@@ -16,7 +16,7 @@ class SemComphderLoss(nn.Module):
     @configurable
     def __init__(self, filter_weight, reconstruct_weight, slot_size, num_classes):
         super(SemComphderLoss, self).__init__()
-        weight = torch.ones((num_classes+1, )).cuda()
+        weight = torch.ones((num_classes+1, ))#.cuda()
         weight[-1] = 30.0
         self.criterion = nn.CrossEntropyLoss(weight=weight, ignore_index=-1)
         self.filter_weight = filter_weight

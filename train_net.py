@@ -39,7 +39,9 @@ def main(args):
     """
     trainer = build_engine(cfg)
     trainer.resume_or_load(resume=args.resume)
-    
+
+    args.eval_only=True
+
     if args.eval_only:
         res = None
         if trainer.val_data_loader is not None:
