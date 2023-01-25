@@ -8,8 +8,8 @@ import logging
 import os
 from collections import OrderedDict
 import torch
-import xmodaler.utils.comm as comm
 from xmodaler.checkpoint import XmodalerCheckpointer
+import xmodaler.utils.comm as comm
 from xmodaler.config import get_cfg
 from xmodaler.engine import DefaultTrainer, default_argument_parser, default_setup, hooks, launch, build_engine
 from xmodaler.modeling import add_config
